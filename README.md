@@ -89,10 +89,6 @@ Generate and view documentation:
 cargo doc --open
 ```
 
-test
-
 ## License
 
 MIT License - See LICENSE file for details
-
-

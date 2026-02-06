@@ -1,0 +1,20 @@
+.cargo/
+
+target/
+
+# Rust backup files
+**/*.rs.bk
+
+# Debug symbols
+*.pdb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

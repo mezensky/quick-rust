@@ -1,0 +1,15 @@
+[package]
+name = "quick-rust"
+version = "0.1.0"
+edition = "2021"
+description = "Quick start Rust project template with best practices"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+rand = "0.8"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }

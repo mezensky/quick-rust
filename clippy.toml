@@ -1,0 +1,15 @@
+# Clippy configuration file
+# See: https://doc.rust-lang.org/clippy/configuration.html
+
+# Warn on missing documentation for public items
+# Uncomment to enforce:
+# missing-docs-in-crate-items = "warn"
+
+# Maximum cognitive complexity before clippy warns
+cognitive-complexity-threshold = 30
+
+# Avoid too many arguments
+too-many-arguments-threshold = 7
+
+# Avoid too many lines in a function
+too-many-lines-threshold = 100

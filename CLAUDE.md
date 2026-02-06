@@ -6,6 +6,8 @@ This file contains project-specific instructions for Claude Code when working on
 
 This is a quick-start Rust project template demonstrating best practices for new Rust projects.
 
+**GitHub Repository**: https://github.com/mezensky/quick-rust
+
 ## Code Standards
 
 - **Rust Edition**: 2021
@@ -54,9 +56,45 @@ This is a quick-start Rust project template demonstrating best practices for new
 - Use `pub` only when necessary
 - Prefer methods over functions when working with types
 
+## GitHub Workflows
+
+### CI Pipeline (.github/workflows/ci.yml)
+
+The CI pipeline runs on:
+- Every push to `main` branch
+- Every pull request to `main` branch
+- Skips on documentation-only changes
+
+Jobs:
+1. **Format**: Checks code formatting with `cargo fmt`
+2. **Clippy**: Runs linter with strict warnings
+3. **Test**: Runs all tests with all features
+4. **Build**: Builds both debug and release versions
+
+All jobs use cargo caching for faster builds.
+
+### Dependabot (.github/dependabot.yml)
+
+- Weekly checks for Cargo dependency updates
+- Weekly checks for GitHub Actions updates
+- Groups patch updates together
+- Automatically opens PRs for updates
+
 ## When Making Changes
 
-- Update CHANGELOG.md with notable changes
+- Update CHANGELOG.md with notable changes under `[Unreleased]`
 - Update tests when modifying functionality
 - Update documentation when changing public APIs
 - Run `make all` before considering work complete
+- Fill out the PR template when opening pull requests
+- Ensure CI checks pass before merging
+- Link related issues in PR description
+
+## GitHub-Specific Files
+
+- `CONTRIBUTING.md`: Contribution guidelines
+- `SECURITY.md`: Security policy and vulnerability reporting
+- `.github/PULL_REQUEST_TEMPLATE.md`: PR template
+- `.github/ISSUE_TEMPLATE/`: Issue templates (bug, feature)
+- `.github/workflows/ci.yml`: CI/CD pipeline
+- `.github/dependabot.yml`: Dependency updates configuration

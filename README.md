@@ -1,5 +1,9 @@
 # quick-rust
 
+[![CI](https://github.com/mezensky/quick-rust/workflows/CI/badge.svg)](https://github.com/mezensky/quick-rust/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Rust Version](https://img.shields.io/badge/rust-2021-orange.svg)](https://www.rust-lang.org)
+
 > Quick start Rust project template with best practices
 
 A minimal Rust project template demonstrating modern Rust best practices including testing, documentation, linting, and project structure.
@@ -12,7 +16,9 @@ A minimal Rust project template demonstrating modern Rust best practices includi
 - Clippy linting configuration
 - Pre-push git hooks
 - Makefile for common tasks
-- CI/CD ready structure
+- GitHub Actions CI/CD pipeline
+- Comprehensive test coverage
+- Cargo caching for faster builds
 
 ## Quick Start
 
@@ -37,6 +43,9 @@ make all
 
 ```
 quick-rust/
+├── .github/
+│   └── workflows/
+│       └── ci.yml       # GitHub Actions CI pipeline
 ├── src/
 │   └── main.rs          # Main application code with examples
 ├── hooks/
@@ -88,6 +97,27 @@ Generate and view documentation:
 ```bash
 cargo doc --open
 ```
+
+## Continuous Integration
+
+The project uses GitHub Actions for CI/CD with the following checks:
+
+- **Format**: Ensures code follows Rust formatting standards
+- **Clippy**: Runs the Rust linter with strict warnings
+- **Test**: Runs all unit and integration tests
+- **Build**: Builds both debug and release versions
+
+All checks must pass before merging pull requests.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run `make all` to ensure all checks pass
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
 
 ## License
 
